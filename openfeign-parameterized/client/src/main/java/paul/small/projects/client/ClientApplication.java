@@ -1,13 +1,15 @@
 package paul.small.projects.client;
 
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.cloud.openfeign.EnableFeignClients;
+import org.springframework.cloud.openfeign.FeignClientsConfiguration;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.context.annotation.PropertySource;
 
-@SpringBootApplication
+@Configuration
+@Import(FeignClientsConfiguration.class)
+@EnableFeignClients
+@PropertySource("classpath:server-location.properties")
 public class ClientApplication {
-
-	public static void main(String[] args) {
-		SpringApplication.run(ClientApplication.class, args);
-	}
 
 }

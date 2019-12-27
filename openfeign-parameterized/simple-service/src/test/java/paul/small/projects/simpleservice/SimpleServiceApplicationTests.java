@@ -1,11 +1,11 @@
-package paul.small.projects.client;
+package paul.small.projects.simpleservice;
 
 import org.junit.jupiter.api.Test;
 
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ClientApplicationTests {
+class SimpleServiceApplicationTests {
 
 	@Test
 	void contextLoads() {

@@ -7,19 +7,21 @@
 		<groupId>paul.small.projects</groupId>
 		<version>0.0.1-SNAPSHOT</version>
 	</parent>
-	<artifactId>client</artifactId>
+	<artifactId>simple-service</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>client</name>
+	<name>simple-service</name>
 
 	<properties>
 		<java.version>11</java.version>
 	</properties>
 
 	<dependencies>
+
 		<dependency>
-			<groupId>org.springframework.cloud</groupId>
-			<artifactId>spring-cloud-starter-openfeign</artifactId>
-			<version>2.2.0.RELEASE</version>
+			<groupId>paul.small.projects</groupId>
+			<artifactId>client</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+			<scope>compile</scope>
 		</dependency>
 	</dependencies>
 

@@ -28,10 +28,10 @@ public class SimpleService {
 
 	private Map<String, Object> getClientObject() {
 		return Map.of(
-				"fullName", "Paul Wood",
+				"full-name", "Paul Wood",
 				"company", "EPI",
-				"employeeNumber", 1234567,
-				"employeeRole", "Backend Developer"
+				"employee-number", 1234567,
+				"employee-role", "Backend Developer"
 		);
 	}
 
