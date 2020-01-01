@@ -8,4 +8,10 @@ class DslInKotlinApplication
 
 fun main(args: Array<String>) {
 	runApplication<DslInKotlinApplication>(*args)
+	regularLambda()
+}
+
+fun regularLambda() {
+	val basic = RegularLambdaFunction()
+	println("result: ${basic.s}")
 }
