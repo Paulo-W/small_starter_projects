@@ -9,6 +9,7 @@ class DslInKotlinApplication
 fun main(args: Array<String>) {
 	runApplication<DslInKotlinApplication>(*args)
 	regularLambda()
+	LambdaWithReceiver().receiverBuilder()
 }
 
 fun regularLambda() {
