@@ -1,4 +1,4 @@
-package paul.projects.dslinkotlin
+package paul.projects.dslinkotlin.lambdas
 
 class LambdaWithReceiver {
 
@@ -15,6 +15,10 @@ class LambdaWithReceiver {
 		}
 
 		println("Receiver Lambda builder: $s")
+	}
+
+	private fun buildStringImp(receiver: StringBuilder.() -> Unit) : String {
+		return StringBuilder().apply(receiver).toString()
 	}
 
 }

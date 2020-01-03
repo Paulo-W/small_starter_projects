@@ -1,4 +1,4 @@
-package paul.projects.dslinkotlin
+package paul.projects.dslinkotlin.lambdas
 
 class RegularLambdaFunction {
 
