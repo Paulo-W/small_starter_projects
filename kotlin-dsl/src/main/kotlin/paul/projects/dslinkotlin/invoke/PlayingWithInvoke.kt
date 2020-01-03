@@ -17,6 +17,10 @@ fun main(args : Array<String>) {
 	for (issue in listOf(i1, i2).filter(predicate)) {
 		println(issue.id)
 	}
+
+	// Invoke allows objects to be called as functions
+	val myBook = BookCase("My Book")
+	println(myBook())
 }
 
 // Class that is of tpe Lambda must override the invoke method
@@ -32,5 +36,12 @@ class ImportantIssue(private val project: String) : (Issue) -> Boolean {
 
 	private fun Issue.isImportant(): Boolean {
 		return type == "Bug" && (priority == "Major" || priority == "Critical")
+	}
+}
+
+class BookCase(private val title: String) {
+
+	operator fun invoke() : String {
+		return "This books name is $title"
 	}
 }

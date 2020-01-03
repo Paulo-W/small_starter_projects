@@ -16,7 +16,7 @@ fun main() {
 	}
 }
 
-class DependencyHandler() {
+class DependencyHandler {
 
 	fun compile(title: String) {
 		println("added new dependency $title")
