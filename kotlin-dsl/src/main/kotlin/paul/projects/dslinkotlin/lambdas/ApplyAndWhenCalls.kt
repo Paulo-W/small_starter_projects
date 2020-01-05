@@ -1,7 +1,13 @@
 package paul.projects.dslinkotlin.lambdas
 
+import java.lang.StringBuilder
+
 fun main(arg: Array<String>) {
 	applyAndWhen()
+
+	val builderAction : StringBuilder.() -> Unit = {
+		append("Hello World!")
+	}
 }
 
 fun applyAndWhen() {
@@ -16,4 +22,14 @@ fun applyAndWhen() {
 	}
 
 	println(map)
+}
+
+/**
+ * The apply method effectively takes the object on which it was called and
+ * uses it as an implicit receiver to call the function/lambda passed in as the
+ * argument
+ */
+inline fun <T> T.apply(block: T.() -> Unit): T {
+	block()
+	return this
 }
