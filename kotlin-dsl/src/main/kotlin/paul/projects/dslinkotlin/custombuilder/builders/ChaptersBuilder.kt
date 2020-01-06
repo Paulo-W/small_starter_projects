@@ -19,6 +19,7 @@ class ChaptersBuilder : Builder<Chapter> {
  * so we can call methods like add and remove without specifying a list.
  *
  */
+@BuilderDsl
 class CHAPTERS : ArrayList<Chapter>() {
 
 	fun chapter(init: ChaptersBuilder.() -> Unit) {
