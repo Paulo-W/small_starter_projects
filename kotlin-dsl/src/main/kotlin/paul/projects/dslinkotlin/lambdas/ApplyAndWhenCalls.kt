@@ -3,14 +3,14 @@ package paul.projects.dslinkotlin.lambdas
 import java.lang.StringBuilder
 
 fun main(arg: Array<String>) {
-	applyAndWhen()
+	applyAndWith()
 
 	val builderAction : StringBuilder.() -> Unit = {
 		append("Hello World!")
 	}
 }
 
-fun applyAndWhen() {
+fun applyAndWith() {
 	val map = mutableMapOf(1 to "one")
 
 	map.apply { this[2] = "two" }
@@ -33,3 +33,6 @@ inline fun <T> T.apply(block: T.() -> Unit): T {
 	block()
 	return this
 }
+
+inline fun <T,R> with(receiver: T, block: T.() -> R) : R =
+	receiver.block()

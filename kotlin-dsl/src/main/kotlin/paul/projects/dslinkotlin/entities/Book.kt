@@ -6,7 +6,7 @@ data class Book(
 		val title: String,
 		val pages: Int,
 		val author: Author?,
-		val chapters: List<Chapter>)
+		val chapters: List<Chapter>?)
 
 data class Author(
 		val name: String,

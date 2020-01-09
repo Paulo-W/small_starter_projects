@@ -1,12 +1,11 @@
 package paul.projects.dslinkotlin.infixfunction
 
 fun main() {
-
 	"Kotlin" should start with "Kot"
 	"Kotlin" should end with "lin"
 }
 
-object end
+object end  		// passed for type not value
 object start
 
 infix fun String.should(x: end): EndsWith = EndsWith(this)
@@ -27,3 +26,5 @@ class StartsWith(val value: String) {
 			throw AssertionError("String: $value does not start with ")
 	}
 }
+
+

@@ -16,15 +16,16 @@ fun main() {
 	}
 }
 
-class DependencyHandler {
 
+
+class DependencyHandler {
 	fun compile(title: String) {
 		println("added new dependency $title")
 	}
 
-	// notice the lambda with receiver that has been passed in
-	// is of the type of the class above
 	operator fun invoke(body : DependencyHandler.() -> Unit) {
 		body()
 	}
 }
+
+
