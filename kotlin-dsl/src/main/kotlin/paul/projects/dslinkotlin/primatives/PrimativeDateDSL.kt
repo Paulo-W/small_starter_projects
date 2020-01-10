@@ -5,7 +5,7 @@ import java.time.Period
 
 fun main() {
 
-	println(1.days.fromNow)
+	println(4.days.fromNow)
 	print(1.days.ago)
 }
 
