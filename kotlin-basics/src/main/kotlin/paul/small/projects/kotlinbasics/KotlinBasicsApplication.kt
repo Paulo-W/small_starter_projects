@@ -8,4 +8,5 @@ class KotlinBasicsApplication
 
 fun main(args: Array<String>) {
 	runApplication<KotlinBasicsApplication>(*args)
+
 }
